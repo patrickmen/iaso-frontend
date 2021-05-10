@@ -1,0 +1,15 @@
+export default {
+  'app.footer.profile': '公司介绍',
+  'app.footer.about-us': '关于我们',
+  'app.footer.news': '新闻资讯',
+  'app.footer.careers': '职业发展',
+  'app.footer.resources': '相关资源',
+  'app.footer.target-protein-platform': '靶点蛋白研究平台',
+  'app.footer.sbdd-platform': 'SBDD平台',
+  'app.footer.pipeline': '研发管线',
+  'app.footer.contact-us': '联系我们',
+  'app.footer.phone': '(021)886-9515',
+  'app.footer.email': 'biofly@gmail.com',
+  'app.footer.register-entry': '登记通道',
+  'app.footer.copyright': '©2021 北京鹭飞生物科技有限公司保留所有版权',
+}

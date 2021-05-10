@@ -1,0 +1,15 @@
+export default {
+  'app.footer.profile': 'Profile',
+  'app.footer.about-us': 'About US',
+  'app.footer.news': 'News',
+  'app.footer.careers': 'Careers',
+  'app.footer.resources': 'Resources',
+  'app.footer.target-protein-platform': 'Target Protein Platform',
+  'app.footer.sbdd-platform': 'SBDD Platform',
+  'app.footer.pipeline': 'Pipeline',
+  'app.footer.contact-us': 'Contact',
+  'app.footer.phone': '(021)886-9515',
+  'app.footer.email': 'biofly@gmail.com',
+  'app.footer.register-entry': 'Register Entry',
+  'app.footer.copyright': '©2021 by LOFLY BIO All Rights Reserved',
+}
