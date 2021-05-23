@@ -8,7 +8,7 @@ export const BannerData = {
       {
         name: 'elem0',
         BannerElement: { className: 'banner-user-elem' },
-        textWrapper: { className: 'banner-text-wrapper' },
+        textWrapper: { className: 'banner-text-wrapper0' },
         bg: { className: 'bg bg0' },
         title: {
           className: 'banner-title',
@@ -17,14 +17,14 @@ export const BannerData = {
         },
         content: {
           className: 'banner-content',
-          children: formatMessage({ id: 'app.home.banner.content' }),
+          children: formatMessage({ id: 'app.home.banner.content0' }),
         },
         button: { className: 'banner-button', href: '/about-us', children: formatMessage({ id: 'app.home.banner.button' }) },
       },
       {
         name: 'elem1',
         BannerElement: { className: 'banner-user-elem' },
-        textWrapper: { className: 'banner-text-wrapper' },
+        textWrapper: { className: 'banner-text-wrapper1' },
         bg: { className: 'bg bg1' },
         title: {
           className: 'banner-title',
@@ -33,14 +33,14 @@ export const BannerData = {
         },
         content: {
           className: 'banner-content',
-          children: formatMessage({ id: 'app.home.banner.content' }),
+          children: formatMessage({ id: 'app.home.banner.content1' }),
         },
         button: { className: 'banner-button', href: '/about-us', children: formatMessage({ id: 'app.home.banner.button' }) },
       },
       {
         name: 'elem2',
         BannerElement: { className: 'banner-user-elem' },
-        textWrapper: { className: 'banner-text-wrapper' },
+        textWrapper: { className: 'banner-text-wrapper2' },
         bg: { className: 'bg bg2' },
         title: {
           className: 'banner-title',
@@ -49,7 +49,7 @@ export const BannerData = {
         },
         content: {
           className: 'banner-content',
-          children: formatMessage({ id: 'app.home.banner.content' }),
+          children: formatMessage({ id: 'app.home.banner.content2' }),
         },
         button: { className: 'banner-button', href: '/about-us', children: formatMessage({ id: 'app.home.banner.button' }) },
       },

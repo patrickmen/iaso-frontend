@@ -1,5 +1,7 @@
 export default {
-  'app.home.banner.content': 'Devoted to provide better products and services.',
+  'app.home.banner.content0': 'We focus on unmet clinical needs and find the right solutions.',
+  'app.home.banner.content1': 'Based on our leading discovery platform, we develop innovative molecules.',
+  'app.home.banner.content2': 'Create a friendly working environment and give members growth opportunities.',
   'app.home.banner.button': 'Learn More',
   'app.home.content0.title': 'Products & Services',
   'app.home.content0.subtitle0': 'Diverse range of business',

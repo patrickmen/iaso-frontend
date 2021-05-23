@@ -1,5 +1,7 @@
 export default {
-    'app.home.banner.content': '致力于提供更好的产品和服务',
+    'app.home.banner.content0': '聚焦未满足的临床需求，并寻找解决之道',
+    'app.home.banner.content1': '建立领先的技术平台，并开发创新性的分子实体',
+    'app.home.banner.content2': '塑造友好的工作环境，并赋予员工成长机会',
     'app.home.banner.button': '了解更多',
     'app.home.content0.title': '产品与服务',
     'app.home.content0.subtitle0': '业务广泛',
