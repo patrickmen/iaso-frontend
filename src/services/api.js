@@ -19,6 +19,16 @@ export async function querySBDDList(params) {
   return request(`/api/v1/technology/sbdd?${stringify(params)}`);
 }
 
+// CADD API
+export async function queryCADDList(params) {
+  return request(`/api/v1/technology/cadd?${stringify(params)}`);
+}
+
+// DEL API
+export async function queryDELList(params) {
+  return request(`/api/v1/technology/del?${stringify(params)}`);
+}
+
 // Products API
 export async function queryProductsList(params) {
   return request(`/api/v1/products?${stringify(params)}`);

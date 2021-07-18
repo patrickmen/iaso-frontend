@@ -9,4 +9,9 @@ export default {
     'app.contact-us.invalid-phone': 'Invalid Phone!',
     'app.contact-us.submit-success': 'Submit success!',
     'app.contact-us.duplicated-submit': 'We have already received your information, please do not submit duplicatedly!',
+    'app.contact-us.map': 'https://cdn.pharmcafe.com/contact-map-02.png',
+    'app.contact-us.addition-name': '#### Beijing LOFLY Biotechnology Co., Ltd.',
+    'app.contact-us.addition-office': '🏢:  DBA, Kechuang 5th Street No.38, Building 2, Beijing, China',
+    'app.contact-us.addition-phone': '☎️:  +86(858)926-5251',
+    'app.contact-us.addition-email': '✉️:  info@loflytx.com',
 }

@@ -1,13 +1,20 @@
 import React, { Component, Fragment } from 'react';
 import { connect } from 'dva';
-import { getLocale } from 'umi/locale';
 import moment from 'moment';
-import { formatMessage } from 'umi/locale';
+import { formatMessage, getLocale } from 'umi/locale';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Ellipsis from '@/components/Ellipsis';
 import { Card, List, Button, Icon } from 'antd';
 import HeadFeaturedPost from '@/components/Article/HeadFeaturedPost';
 import styles from './News.less';
+
+const headFeaturedPost = {
+  title: 'MEET LOFLY BIO',
+  description:
+    "A Biopharmaceutical company, devoted to help the general public and investors better.",
+  image: 'https://cdn.pharmcafe.com/news-banner-01.jpg',
+  imgText: 'head image description',
+};
 
 @connect(({ news, loading }) => ({
   news,
@@ -43,14 +50,6 @@ class NewsList extends Component {
       news: { news = [] },
       loading,
     } = this.props;
-
-    const headFeaturedPost = {
-      title: 'Dynamic & News',
-      description:
-        "Welcome to browse and view.",
-      image: 'https://source.unsplash.com/random',
-      imgText: 'head image description',
-    };
 
     const ArticleListContent = ({ data: { description, title, createdAt, updatedAt} }) => (
       <div className={styles.listContent}>
@@ -89,9 +88,7 @@ class NewsList extends Component {
     return (
       <Fragment>
         <CssBaseline />
-        <div>
-          <HeadFeaturedPost post={headFeaturedPost} />
-        </div>
+        <HeadFeaturedPost post={headFeaturedPost} />
         <Card
           bordered={false}
           bodyStyle={{ padding: '8px 8px 8px 68px', background: '#eff2f5' }}

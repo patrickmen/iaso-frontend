@@ -1,5 +1,6 @@
 import React from 'react';
 import { formatMessage } from 'umi/locale';
+import { urlToList } from '@/components/_utils/pathTools';
 
 export const BannerData = {
   wrapper: { className: 'banner' },
@@ -12,14 +13,13 @@ export const BannerData = {
         bg: { className: 'bg bg0' },
         title: {
           className: 'banner-title',
-          // children:
-          //   'https://zos.alipayobjects.com/rmsportal/HqnZZjBjWRbjyMr.png',
+          children: formatMessage({ id: 'app.home.banner.title' }),
         },
         content: {
           className: 'banner-content',
           children: formatMessage({ id: 'app.home.banner.content0' }),
         },
-        button: { className: 'banner-button', href: '/about-us', children: formatMessage({ id: 'app.home.banner.button' }) },
+        // button: { className: 'banner-button', href: '/about-us', children: formatMessage({ id: 'app.home.banner.button' }) },
       },
       {
         name: 'elem1',
@@ -28,14 +28,13 @@ export const BannerData = {
         bg: { className: 'bg bg1' },
         title: {
           className: 'banner-title',
-          // children:
-          //   'https://zos.alipayobjects.com/rmsportal/HqnZZjBjWRbjyMr.png',
+          children: formatMessage({ id: 'app.home.banner.title' }),
         },
         content: {
           className: 'banner-content',
           children: formatMessage({ id: 'app.home.banner.content1' }),
         },
-        button: { className: 'banner-button', href: '/about-us', children: formatMessage({ id: 'app.home.banner.button' }) },
+        // button: { className: 'banner-button', href: '/about-us', children: formatMessage({ id: 'app.home.banner.button' }) },
       },
       {
         name: 'elem2',
@@ -44,14 +43,13 @@ export const BannerData = {
         bg: { className: 'bg bg2' },
         title: {
           className: 'banner-title',
-          // children:
-          //   'https://zos.alipayobjects.com/rmsportal/HqnZZjBjWRbjyMr.png',
+          children: formatMessage({ id: 'app.home.banner.title' }),
         },
         content: {
           className: 'banner-content',
           children: formatMessage({ id: 'app.home.banner.content2' }),
         },
-        button: { className: 'banner-button', href: '/about-us', children: formatMessage({ id: 'app.home.banner.button' }) },
+        // button: { className: 'banner-button', href: '/about-us', children: formatMessage({ id: 'app.home.banner.button' }) },
       },
     ],
     type: ['across'],
@@ -275,65 +273,71 @@ export const FooterData = {
     className: 'home-page',
     gutter: 0,
     children: [
-      // {
-      //   name: 'block0',
-      //   xs: 24,
-      //   md: 6,
-      //   className: 'block',
-      //   title: {
-      //     className: 'logo',
-      //     children:
-      //       'https://zos.alipayobjects.com/rmsportal/qqaimmXZVSwAhpL.svg',
-      //   },
-      //   childWrapper: {
-      //     className: 'slogan',
-      //     children: [
-      //       {
-      //         name: 'content0',
-      //         children: 'A Demo for design.',
-      //       },
-      //     ],
-      //   },
-      // },
       {
         name: 'block2',
         xs: 24,
-        md: 8,
+        md: 6,
         className: 'block',
-        title: { children: formatMessage({ id: 'app.footer.profile' }) },
+        title: { children: formatMessage({ id: 'app.footer.about-lofly' }) },
         childWrapper: {
           children: [
-            { href: '/about-us', name: 'about-us', children: formatMessage({ id: 'app.footer.about-us' }) },
+            { href: '/about-us', name: 'company profile', children: formatMessage({ id: 'app.footer.profile' }) },
+            { href: '/pipeline', name: 'pipeline', children: formatMessage({ id: 'app.footer.pipeline' }) },
+            { href: '/partnering', name: 'partnering', children: formatMessage({ id: 'app.footer.partnering' }) },
             { href: '/news', name: 'news', children: formatMessage({ id: 'app.footer.news' }) },
-            { href: '/careers', name: 'careers', children: formatMessage({ id: 'app.footer.careers' }) },
           ],
         },
       },
       {
         name: 'block1',
         xs: 24,
-        md: 8,
+        md: 6,
         className: 'block',
-        title: { children: formatMessage({ id: 'app.footer.resources' }) },
+        title: { children: formatMessage({ id: 'app.footer.technology' }) },
         childWrapper: {
           children: [
-            { href: '/technology/target-protein-platform', name: 'target-protein-platform', children: formatMessage({ id: 'app.footer.target-protein-platform' }) },
+            { href: '/technology/gene-to-protein-platform', name: 'gene-to-protein-platform', children: formatMessage({ id: 'app.footer.gene-to-protein-platform' }) },
+            { href: '/technology/cadd-platform', name: 'cadd-platform', children: formatMessage({ id: 'app.footer.cadd-platform' }) },
             { href: '/technology/sbdd-platform', name: 'sbdd-platform', children: formatMessage({ id: 'app.footer.sbdd-platform' }) },
-            { href: '/pipeline', name: 'pipeline', children: formatMessage({ id: 'app.footer.pipeline' }) },
+            { href: '/technology/del-platform', name: 'del-platform', children: formatMessage({ id: 'app.footer.del-platform' }) },
           ],
         },
       },
       {
         name: 'block3',
         xs: 24,
-        md: 8,
+        md: 6,
         className: 'block',
         title: { children: formatMessage({ id: 'app.footer.contact-us' }) },
         childWrapper: {
           children: [
-            { href: '/', name: 'phone', children: formatMessage({ id: 'app.footer.phone' }) },
-            { href: '/', name: 'email', children: formatMessage({ id: 'app.footer.email' }) },
-            { href: '/contact-us', name: 'contact-us', children: formatMessage({ id: 'app.footer.register-entry' }) },
+            { href: '/contact-us', name: 'contact-details', children: formatMessage({ id: 'app.footer.contact-details' }) },
+            { href: '/careers', name: 'careers', children: formatMessage({ id: 'app.footer.careers' }) },
+            { href: '/contact-us', name: 'online-message', children: formatMessage({ id: 'app.footer.online-message' }) },
+          ],
+        },
+      },
+      {
+        name: 'block0',
+        xs: 24,
+        md: 6,
+        className: 'block',
+        title: {
+          className: 'logo',
+          children:
+            'https://cdn.pharmcafe.com/QR-code.jpg'
+        },
+        childWrapper: {
+          className: 'slogan',
+          children: [
+            {
+              name: 'slogan0',
+              children: formatMessage({ id: 'app.footer.slogan0' })
+            },
+            {
+              name: 'slogan1',
+              children: formatMessage({ id: 'app.footer.slogan1' }),
+            },
           ],
         },
       },

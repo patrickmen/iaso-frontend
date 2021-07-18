@@ -1,36 +1,36 @@
 
 @banner: banner;
 .@{banner} {
-  // 如果在第一屏且导航位置为 relative, 一屏为 height: calc(~"100vh - 64px");
+  // 如果在第一屏且导航位置为 relative, 一屏为 height: calc(~"100vh - 128px");
   width: 100%;
-  height: calc(~"100vh - 64px");
+  height: calc(~"100vh - 128px");
   position: relative;
   border-color: #666;
   background: #fff;
   &-wrapper, .banner-anim {
-    height: calc(~"100vh - 64px");
+    height: calc(~"100vh - 128px");
   }
   & .queue-anim-leaving {
     position: relative !important;
   }
   .banner-user-elem {
-    height: calc(~"100vh - 64px");
+    height: calc(~"100vh - 128px");
     color: #fff;
     position: relative;
     overflow: hidden;
   }
   .bg0 {
-    background: url("https://www.hualigs.cn/image/home-banner-01.jpg") center;
+    background: url("https://cdn.pharmcafe.com/home-banner-1.jpg") center;
   }
   .bg1 {
-    background: url("https://www.hualigs.cn/image/home-banner-02.jpg") center;
+    background: url("https://cdn.pharmcafe.com/home-banner-2.jpg") center;
   }
   .bg2 {
-    background: url("https://www.hualigs.cn/image/home-banner-03.jpg") center;
+    background: url("https://cdn.pharmcafe.com/home-banner-3.jpg") center;
   }
   .bg {
     width: 100%;
-    height: calc(~"100vh - 64px");
+    height: calc(~"100vh - 128px");
     position: absolute;
     top: 0;
     left: 0;
@@ -39,60 +39,54 @@
   }
   .banner-user-elem .banner-user-title {
     font-size: 22px;
-    top: 40%;
+    top: 45%;
   }
   .banner-user-elem .banner-user-text {
-    top: 40%;
+    top: 45%;
   }
   & &-text-wrapper0 {
     display: block;
     position: relative;
-    top: 40%;
+    top: 45%;
     left: 0;
     right: 0;
-    margin: auto;
+    margin-left: 10px;
     font-size: 32px;
     color: @template-text-color-light;
-    // color: #d2d2d2;
-    width: 680px;
-    text-align: center;
+    text-align: start;
   }
   & &-text-wrapper1 {
     display: block;
     position: relative;
-    top: 20%;
+    top: 45%;
     left: 0;
     right: 0;
-    margin: auto;
+    margin-left: 10px;
     font-size: 32px;
     color: @template-text-color-light;
-    // color: #d2d2d2;
-    width: 680px;
-    text-align: center;
+    text-align: start;
   }
   & &-text-wrapper2 {
     display: block;
     position: relative;
-    top: 50%;
+    top: 45%;
     left: 0;
     right: 0;
-    margin: auto;
+    margin-left: 10px;
     font-size: 32px;
     color: @template-text-color-light;
-    // color: #d2d2d2;
-    width: 680px;
-    text-align: center;
+    text-align: start;
   }
   & &-title {
-    width: 350px;
-    left: 30px;
+    width: 400px;
+    left: 80px;
     margin: auto;
     display: inline-block;
     font-size: 40px;
     position: relative;
   }
   & &-content {
-    margin-bottom: 20px;
+    margin: 50px 80px 20px;
     word-wrap: break-word;
   }
   & &-button {

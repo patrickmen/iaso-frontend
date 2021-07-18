@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
-import { message } from 'antd';
+import { message, Input } from 'antd';
+import ReactMarkdown from 'react-markdown';
+import "github-markdown-css";
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
@@ -10,30 +12,47 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import withStyles from "@material-ui/styles/withStyles";
 import { makeStyles } from '@material-ui/core/styles';
-import { formatMessage } from 'umi/locale';
+import { formatMessage, getLocale } from 'umi/locale';
 import { submitContact, errorAnalysis } from '@/services';
+import HeadFeaturedPost from '@/components/Article/HeadFeaturedPost';
+
+const headFeaturedPost = {
+  title: 'MEET LOFLY BIO',
+  description:
+    "A Biopharmaceutical company, devoted to help the general public and investors better.",
+  image: 'https://cdn.pharmcafe.com/contact-banner-01.jpg',
+  imgText: 'head image description',
+};
 
 const useStyles = makeStyles((theme) => ({
   image: {
-    backgroundImage: 'url(https://source.unsplash.com/random)',
+    backgroundImage: 
+      getLocale() === 'zh-CN' ? 'url(https://cdn.pharmcafe.com/contact-map-01.png)' : 'url(https://cdn.pharmcafe.com/contact-map-02.png)',
     backgroundRepeat: 'no-repeat',
-    backgroundColor:
-      theme.palette.type === 'light' ? theme.palette.grey[50] : theme.palette.grey[900],
-    backgroundSize: 'cover',
+    backgroundColor: '#eff2f5',
+    backgroundSize: 'contain',
     backgroundPosition: 'center',
-    marginTop: '-2px',
-    marginBottom: '-30px',
+    marginLeft: '45px',
   },
   root: {
-    marginTop: '-2px',
+    marginTop: '-14px',
     marginBottom: '-30px',
     backgroundColor: '#eff2f5',
   },
   paper: {
-    margin: theme.spacing(8, 4),
+    margin: theme.spacing(8, 4, -4, 4),
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
+  },
+  addition: {
+    margin: theme.spacing(-12, 1, 4),
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'start',
+  },
+  leftPart: {
+    pardding: '4px',
   },
   form: {
     width: '100%', // Fix IE 11 issue.
@@ -106,72 +125,104 @@ export default function Contact() {
   };
   
   return (
-    <Grid container component="main">
-      <CssBaseline />
-      <Grid item xs={7} component={Paper} elevation={6} square className={classes.root}>
-        <Grid item xs={8}>
-          <div className={classes.paper}>
-            <Typography component="h1" variant="h5">
-              { formatMessage({ id: 'app.contact-us.title' }) }
-            </Typography>
-            <form className={classes.form} id="form" method="post">
-            <TextField
-                variant="outlined"
-                margin="normal"
-                required
-                fullWidth
-                id="name"
-                label={ formatMessage({ id: 'app.contact-us.name' }) }
-                name="name"
-                onChange={handleChange("name")}
-                autoFocus
-              />
-              <TextField
-                variant="outlined"
-                margin="normal"
-                required
-                fullWidth
-                id="email"
-                label={ formatMessage({ id: 'app.contact-us.email' }) }
-                name="email"
-                autoFocus
-                onChange={handleChange("email")}
-              />
-              <TextField
-                variant="outlined"
-                margin="normal"
-                required
-                fullWidth
-                name="phone"
-                label={ formatMessage({ id: 'app.contact-us.phone' }) }
-                id="phone"
-                onChange={handleChange("phone")}
-              />
-              <TextField
-                variant="outlined"
-                margin="normal"
-                required
-                fullWidth
-                name="message"
-                label={ formatMessage({ id: 'app.contact-us.message' }) }
-                id="message"
-                onChange={handleChange("message")}
-              />
-              <Button
-                type="submit"
-                fullWidth
-                variant="contained"
-                color="primary"
-                className={classes.submit}
-                onClick={handleValid}
-              >
-                { formatMessage({ id: 'app.contact-us.submit' }) }
-              </Button>
-            </form>
-          </div>
-        </Grid>
+    <React.Fragment>
+      <HeadFeaturedPost post={headFeaturedPost} />
+      <Grid container component="main">
+        <CssBaseline />
+        <Grid item xs={12} component={Paper} elevation={6} square className={classes.root}>
+          <Grid container justifyContent="center" spacing={10}>
+            <Grid item xs={5}>
+              <div className={classes.paper}>
+                <Typography component="h1" variant="h5">
+                  { formatMessage({ id: 'app.contact-us.title' }) }
+                </Typography>
+                <form className={classes.form} id="form" method="post">
+                <TextField
+                    variant="outlined"
+                    margin="normal"
+                    required
+                    fullWidth
+                    id="name"
+                    label={ formatMessage({ id: 'app.contact-us.name' }) }
+                    name="name"
+                    onChange={handleChange("name")}
+                    autoFocus
+                  />
+                  <TextField
+                    variant="outlined"
+                    margin="normal"
+                    required
+                    fullWidth
+                    id="email"
+                    label={ formatMessage({ id: 'app.contact-us.email' }) }
+                    name="email"
+                    autoFocus
+                    onChange={handleChange("email")}
+                  />
+                  <TextField
+                    variant="outlined"
+                    margin="normal"
+                    required
+                    fullWidth
+                    name="phone"
+                    label={ formatMessage({ id: 'app.contact-us.phone' }) }
+                    id="phone"
+                    onChange={handleChange("phone")}
+                  />
+                  <TextField
+                    rows={5}
+                    multiline
+                    variant="outlined"
+                    margin="normal"
+                    required
+                    fullWidth
+                    name="message"
+                    label={ formatMessage({ id: 'app.contact-us.message' }) }
+                    id="message"
+                    onChange={handleChange("message")}
+                  />
+                  <Button
+                    type="submit"
+                    fullWidth
+                    variant="contained"
+                    color="primary"
+                    className={classes.submit}
+                    onClick={handleValid}
+                  >
+                    { formatMessage({ id: 'app.contact-us.submit' }) }
+                  </Button>
+                </form>
+              </div>
+            </Grid>
+            <Grid item xs={6} className={classes.image} />
+            <Grid item xs={5} />
+            <Grid item xs={6}>
+              <div className={classes.addition}>
+                <ReactMarkdown
+                  className="markdown-body"
+                  source={ formatMessage({ id: 'app.contact-us.addition-name' }) }
+                  escapeHtml={true}
+                /> 
+                <ReactMarkdown
+                  className="markdown-body"
+                  source={ formatMessage({ id: 'app.contact-us.addition-office' }) }
+                  escapeHtml={true}
+                /> 
+                <ReactMarkdown
+                  className="markdown-body"
+                  source={ formatMessage({ id: 'app.contact-us.addition-phone' }) }
+                  escapeHtml={true}
+                /> 
+                <ReactMarkdown
+                  className="markdown-body"
+                  source={ formatMessage({ id: 'app.contact-us.addition-email' }) }
+                  escapeHtml={true}
+                /> 
+              </div>
+            </Grid>
+          </Grid>
+        </Grid>  
       </Grid>
-      <Grid item xs={5} className={classes.image} />
-    </Grid>
+    </React.Fragment>
   );
 }

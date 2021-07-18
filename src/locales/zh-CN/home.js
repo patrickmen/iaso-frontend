@@ -1,4 +1,5 @@
 export default {
+    'app.home.banner.title': '聚焦源头创建药物开发',
     'app.home.banner.content0': '聚焦未满足的临床需求，并寻找解决之道',
     'app.home.banner.content1': '建立领先的技术平台，并开发创新性的分子实体',
     'app.home.banner.content2': '塑造友好的工作环境，并赋予员工成长机会',

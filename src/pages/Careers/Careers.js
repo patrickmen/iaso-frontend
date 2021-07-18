@@ -1,13 +1,22 @@
 import React, { Component } from 'react';
 import { connect } from 'dva';
 import { getLocale } from 'umi/locale';
-import ReactMarkdown from 'react-markdown';
-import 'github-markdown-css';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container';
 import HeadFeaturedPost from '@/components/Article/HeadFeaturedPost';
+import PictureAlignRight from '@/components/Article/PictureAlignRight';
+import PictureAlignLeft from '@/components/Article/PictureAlignLeft';
+import PictureAlignJustify from '@/components/Article/PictureAlignJustify';
 import Exception404 from '@/pages/ExceptionBeta/E404';
+
+const headFeaturedPost = {
+  title: 'MEET LOFLY BIO',
+  description:
+    "A Biopharmaceutical company, devoted to help the general public and investors better.",
+  image: 'https://cdn.pharmcafe.com/careers-banner-01.jpg',
+  imgText: 'head image description',
+};
 
 @connect(({ careers, loading }) => ({
   careers,
@@ -33,32 +42,18 @@ export default class Careers extends Component {
       careers: { careers = [] },
       loading,
     } = this.props;
-
-    const headFeaturedPost = {
-      title: 'MEET LOFLY BIO',
-      description:
-        "A Biopharmaceutical company, devoted to help the general public and investors better.",
-      image: 'https://source.unsplash.com/random',
-      imgText: 'head image description',
-    };
  
     return (
       <React.Fragment>
         <CssBaseline />
-        <div>
-          <HeadFeaturedPost post={headFeaturedPost} />
-        </div>
+        <HeadFeaturedPost post={headFeaturedPost} />
         <Container maxWidth="lg">
           <main>
           { careers.length ? 
             <Grid container>
               { careers.map((post) => (
                 <div key={JSON.parse(post.content).substring(0, 40)}>
-                  <ReactMarkdown
-                    className="markdown-body"
-                    source={JSON.parse(post.content)}
-                    escapeHtml={false}
-                  />
+                  {post.align == "right" ? <PictureAlignRight post={post} /> : post.align == "left" ? <PictureAlignLeft post={post} /> : <PictureAlignJustify post={post} />}
                 </div> 
               ))}
             </Grid> : <Exception404/> 

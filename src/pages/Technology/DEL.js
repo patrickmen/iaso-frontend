@@ -9,40 +9,44 @@ import PictureAlignRight from '@/components/Article/PictureAlignRight';
 import PictureAlignLeft from '@/components/Article/PictureAlignLeft';
 import PictureAlignJustify from '@/components/Article/PictureAlignJustify';
 import Exception404 from '@/pages/ExceptionBeta/E404';
-import NewsList from './News';
 
 const headFeaturedPost = {
   title: 'MEET LOFLY BIO',
   description:
     "A Biopharmaceutical company, devoted to help the general public and investors better.",
-  image: 'https://cdn.pharmcafe.com/news-banner-01.jpg',
+  image: 'https://cdn.pharmcafe.com/platform-banner-01.jpg',
   imgText: 'head image description',
 };
 
-@connect(({ news, loading }) => ({
-  news,
-  loading: loading.models.news,
+@connect(({ del, loading }) => ({
+  del,
+  loading: loading.models.del,
 }))
 
-export default class NewDetail extends Component {
+export default class DEL extends Component {
   state = {
+    // markdown: [],
     currentLang: getLocale(),
   }
   componentDidMount() {
-    let title = this.props.computedMatch.params.title;
+    // data.map((item) => {
+    //   fetch(item)
+    //     .then(res => res.text())
+    //     .then(text => this.setState({markdown: [...this.state.markdown, text]}));
+    // }) 
     const { dispatch } = this.props;
     dispatch({
-      type: 'news/fetch',
+      type: 'del/fetch',
       payload: {
-        title: title,
         lang: this.state.currentLang,
       },
-    });    
+    });   
   }
 
   render() {
+    // const { markdown } = this.state;
     const {
-      news: { news = [] },
+      del: { del = [] },
       loading,
     } = this.props;
 
@@ -52,15 +56,15 @@ export default class NewDetail extends Component {
         <HeadFeaturedPost post={headFeaturedPost} />
         <Container maxWidth="lg">
           <main>
-            { news.length ? 
-              <Grid container>
-                { news.map((post) => (
-                  <div key={JSON.parse(post.content).substring(0, 40)}>
-                    {post.align == "right" ? <PictureAlignRight post={post} /> : post.align == "left" ? <PictureAlignLeft post={post} /> : <PictureAlignJustify post={post} />}
-                  </div> 
-                ))}
-              </Grid> : <Exception404/> 
-            }
+          { del.length ? 
+            <Grid container>
+              { del.map((post) => (
+                <div key={JSON.parse(post.content).substring(0, 40)}>
+                  {post.align == "right" ? <PictureAlignRight post={post} /> : post.align == "left" ? <PictureAlignLeft post={post} /> : <PictureAlignJustify post={post} />}
+                </div> 
+              ))}
+            </Grid> : <Exception404/> 
+          }
           </main>
         </Container>
       </React.Fragment>
