@@ -24,7 +24,8 @@ const headFeaturedPost = {
 class NewsList extends Component {
   state = {
     currentLang: getLocale(),
-  }
+  };
+
   componentDidMount() {
     const { dispatch } = this.props;
     dispatch({
@@ -65,7 +66,7 @@ class NewsList extends Component {
           <em>{moment(createdAt).add(8, 'hours').format('YYYY-MM-DD HH:mm')}</em>
           &nbsp;&nbsp;&nbsp;{formatMessage({ id: 'app.news.updated-at' })}
           <em>{moment(updatedAt).add(8, 'hours').format('YYYY-MM-DD HH:mm')}</em>
-          <Button type="link" onClick={() => this.props.history.push(`/news/${title}`)}>&nbsp;&nbsp;&nbsp;{formatMessage({ id: 'app.news.read-more' })}</Button>
+          <Button className={styles.readMore} type="link" onClick={() => this.props.history.push(`/news/${title}`)}>&nbsp;&nbsp;&nbsp;{formatMessage({ id: 'app.news.read-more' })}</Button>
         </div>
       </div>
     );
@@ -91,7 +92,7 @@ class NewsList extends Component {
         <HeadFeaturedPost post={headFeaturedPost} />
         <Card
           bordered={false}
-          bodyStyle={{ padding: '8px 8px 8px 68px', background: '#eff2f5' }}
+          bodyStyle={{ padding: styles.card, background: '#eff2f5' }}
         >
           <List
             size="large"

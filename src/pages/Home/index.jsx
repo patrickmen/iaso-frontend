@@ -1,7 +1,6 @@
 import React from 'react';
 import { enquireScreen } from 'enquire-js';
 import GridContent from '@/components/PageHeaderWrapper/GridContent';
-
 import Banner from './Banner';
 import Content0 from './Content0';
 import Content1 from './Content1';

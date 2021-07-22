@@ -136,15 +136,32 @@
 
 @media screen and (max-width: 767px) {
   .@{banner} {
-    & &-text-wrapper {
-      width: 90%;
-      .@{banner}-title {
-        width: 90%;
-        left: 0;
-      }
+    height: calc(~"100vh - 220px");
+    &-wrapper, .banner-anim {
+      height: calc(~"100vh - 220px");
+    }
+    .banner-user-elem {
+      height: calc(~"100vh - 220px");
     }
     .bg {
-      background-attachment: inherit;
+      height: calc(~"100vh - 220px");
+    }
+    & &-text-wrapper0 {
+      top: 35%;
+    }
+    & &-text-wrapper1 {
+      top: 35%;
+    }
+    & &-text-wrapper2 {
+      top: 35%;
+    }
+    & &-title {
+      width: 350px;
+      left: 20px;
+      font-size: 40px;
+    }
+    & &-content {
+      margin: 50px 20px 20px;
     }
   }
 }

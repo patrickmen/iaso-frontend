@@ -2,8 +2,6 @@ FROM nginx
 
 WORKDIR /usr/src/iaso-frontend/
 
-COPY ./docker/nginx.conf /etc/nginx/conf.d/default.conf
-
 COPY ./dist  /usr/share/nginx/html/
 
 EXPOSE 80
