@@ -8,9 +8,9 @@ import ContactMobile from './ContactMobile';
 import HeadFeaturedPost from '@/components/Article/HeadFeaturedPost';
 
 const headFeaturedPost = {
-    title: 'MEET LOFLY BIO',
+    title: "",
     description:
-      "A Biopharmaceutical company, devoted to help the general public and investors better.",
+      "",
     image: 'https://cdn.pharmcafe.com/contact-banner-01.jpg',
     imgText: 'head image description',
 };

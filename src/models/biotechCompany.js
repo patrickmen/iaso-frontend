@@ -1,15 +1,15 @@
-import { queryCADDList } from '@/services/api';
+import { queryBiotechCompanyList } from '@/services/api';
 
 export default {
-  namespace: 'cadd',
+  namespace: 'biotechCompany',
 
   state: {
-    cadd: [],
+    biotechCompany: [],
   },
 
   effects: {
     *fetch({ payload }, { call, put }) {
-      const response = yield call(queryCADDList, payload);
+      const response = yield call(queryBiotechCompanyList, payload);
       yield put({
         type: 'queryList',
         payload: Array.isArray(response.data) ? response.data : [],
@@ -21,7 +21,7 @@ export default {
     queryList(state, action) {
       return {
         ...state,
-        cadd: action.payload,
+        biotechCompany: action.payload,
       };
     },
   },

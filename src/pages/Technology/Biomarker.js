@@ -11,19 +11,19 @@ import PictureAlignJustify from '@/components/Article/PictureAlignJustify';
 import Exception404 from '@/pages/ExceptionBeta/E404';
 
 const headFeaturedPost = {
-  title: 'MEET LOFLY BIO',
+  title: "",
   description:
-    "A Biopharmaceutical company, devoted to help the general public and investors better.",
+    "",
   image: 'https://cdn.pharmcafe.com/platform-banner-01.jpg',
   imgText: 'head image description',
 };
 
-@connect(({ cadd, loading }) => ({
-  cadd,
-  loading: loading.models.cadd,
+@connect(({ biomarker, loading }) => ({
+  biomarker,
+  loading: loading.models.biomarker,
 }))
 
-export default class CADD extends Component {
+export default class Biomarker extends Component {
   state = {
     // markdown: [],
     currentLang: getLocale(),
@@ -36,7 +36,7 @@ export default class CADD extends Component {
     // }) 
     const { dispatch } = this.props;
     dispatch({
-      type: 'cadd/fetch',
+      type: 'biomarker/fetch',
       payload: {
         lang: this.state.currentLang,
       },
@@ -46,7 +46,7 @@ export default class CADD extends Component {
   render() {
     // const { markdown } = this.state;
     const {
-      cadd: { cadd = [] },
+      biomarker: { biomarker = [] },
       loading,
     } = this.props;
 
@@ -56,9 +56,9 @@ export default class CADD extends Component {
         <HeadFeaturedPost post={headFeaturedPost} />
         <Container maxWidth="lg">
           <main>
-          { cadd.length ? 
+          { biomarker.length ? 
             <Grid container>
-              { cadd.map((post) => (
+              { biomarker.map((post) => (
                 <div key={JSON.parse(post.content).substring(0, 40)}>
                   {post.align == "right" ? <PictureAlignRight post={post} /> : post.align == "left" ? <PictureAlignLeft post={post} /> : <PictureAlignJustify post={post} />}
                 </div> 

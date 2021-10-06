@@ -11,32 +11,26 @@ import PictureAlignJustify from '@/components/Article/PictureAlignJustify';
 import Exception404 from '@/pages/ExceptionBeta/E404';
 
 const headFeaturedPost = {
-  title: 'MEET LOFLY BIO',
+  title: "",
   description:
-    "A Biopharmaceutical company, devoted to help the general public and investors better.",
-  image: 'https://cdn.pharmcafe.com/platform-banner-01.jpg',
+    "",
+  image: 'https://cdn.pharmcafe.com/partnering-banner-01.jpg',
   imgText: 'head image description',
 };
 
-@connect(({ del, loading }) => ({
-  del,
-  loading: loading.models.del,
+@connect(({ academicInstitution, loading }) => ({
+  academicInstitution,
+  loading: loading.models.academicInstitution,
 }))
 
-export default class DEL extends Component {
+export default class AcademicInstitution extends Component {
   state = {
-    // markdown: [],
     currentLang: getLocale(),
   }
-  componentDidMount() {
-    // data.map((item) => {
-    //   fetch(item)
-    //     .then(res => res.text())
-    //     .then(text => this.setState({markdown: [...this.state.markdown, text]}));
-    // }) 
+  componentDidMount() { 
     const { dispatch } = this.props;
     dispatch({
-      type: 'del/fetch',
+      type: 'academicInstitution/fetch',
       payload: {
         lang: this.state.currentLang,
       },
@@ -44,21 +38,20 @@ export default class DEL extends Component {
   }
 
   render() {
-    // const { markdown } = this.state;
     const {
-      del: { del = [] },
+      academicInstitution: { academicInstitution = [] },
       loading,
     } = this.props;
-
+ 
     return (
       <React.Fragment>
         <CssBaseline />
         <HeadFeaturedPost post={headFeaturedPost} />
         <Container maxWidth="lg">
           <main>
-          { del.length ? 
+          { academicInstitution.length ? 
             <Grid container>
-              { del.map((post) => (
+              { academicInstitution.map((post) => (
                 <div key={JSON.parse(post.content).substring(0, 40)}>
                   {post.align == "right" ? <PictureAlignRight post={post} /> : post.align == "left" ? <PictureAlignLeft post={post} /> : <PictureAlignJustify post={post} />}
                 </div> 

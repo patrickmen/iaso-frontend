@@ -1,15 +1,15 @@
-import { queryDELList } from '@/services/api';
+import { queryAcademicInstitutionList } from '@/services/api';
 
 export default {
-  namespace: 'del',
+  namespace: 'academicInstitution',
 
   state: {
-    del: [],
+    academicInstitution: [],
   },
 
   effects: {
     *fetch({ payload }, { call, put }) {
-      const response = yield call(queryDELList, payload);
+      const response = yield call(queryAcademicInstitutionList, payload);
       yield put({
         type: 'queryList',
         payload: Array.isArray(response.data) ? response.data : [],
@@ -21,7 +21,7 @@ export default {
     queryList(state, action) {
       return {
         ...state,
-        del: action.payload,
+        academicInstitution: action.payload,
       };
     },
   },

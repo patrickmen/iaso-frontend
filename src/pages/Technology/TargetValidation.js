@@ -11,26 +11,32 @@ import PictureAlignJustify from '@/components/Article/PictureAlignJustify';
 import Exception404 from '@/pages/ExceptionBeta/E404';
 
 const headFeaturedPost = {
-  title: 'MEET LOFLY BIO',
+  title: "",
   description:
-    "A Biopharmaceutical company, devoted to help the general public and investors better.",
-  image: 'https://cdn.pharmcafe.com/partnering-banner-01.jpg',
+    "",
+  image: 'https://cdn.pharmcafe.com/platform-banner-01.jpg',
   imgText: 'head image description',
 };
 
-@connect(({ partnering, loading }) => ({
-  partnering,
-  loading: loading.models.partnering,
+@connect(({ targetValidation, loading }) => ({
+  targetValidation,
+  loading: loading.models.targetValidation,
 }))
 
-export default class Partnering extends Component {
+export default class TargetValidation extends Component {
   state = {
+    // markdown: [],
     currentLang: getLocale(),
   }
-  componentDidMount() { 
+  componentDidMount() {
+    // data.map((item) => {
+    //   fetch(item)
+    //     .then(res => res.text())
+    //     .then(text => this.setState({markdown: [...this.state.markdown, text]}));
+    // }) 
     const { dispatch } = this.props;
     dispatch({
-      type: 'partnering/fetch',
+      type: 'targetValidation/fetch',
       payload: {
         lang: this.state.currentLang,
       },
@@ -38,8 +44,9 @@ export default class Partnering extends Component {
   }
 
   render() {
+    // const { markdown } = this.state;
     const {
-      partnering: { partnering = [] },
+      targetValidation: { targetValidation = [] },
       loading,
     } = this.props;
  
@@ -49,9 +56,9 @@ export default class Partnering extends Component {
         <HeadFeaturedPost post={headFeaturedPost} />
         <Container maxWidth="lg">
           <main>
-          { partnering.length ? 
+          { targetValidation.length ? 
             <Grid container>
-              { partnering.map((post) => (
+              { targetValidation.map((post) => (
                 <div key={JSON.parse(post.content).substring(0, 40)}>
                   {post.align == "right" ? <PictureAlignRight post={post} /> : post.align == "left" ? <PictureAlignLeft post={post} /> : <PictureAlignJustify post={post} />}
                 </div> 

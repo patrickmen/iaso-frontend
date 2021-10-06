@@ -11,32 +11,26 @@ import PictureAlignJustify from '@/components/Article/PictureAlignJustify';
 import Exception404 from '@/pages/ExceptionBeta/E404';
 
 const headFeaturedPost = {
-  title: 'MEET LOFLY BIO',
+  title: "",
   description:
-    "A Biopharmaceutical company, devoted to help the general public and investors better.",
-  image: 'https://cdn.pharmcafe.com/platform-banner-01.jpg',
+    "",
+  image: 'https://cdn.pharmcafe.com/partnering-banner-01.jpg',
   imgText: 'head image description',
 };
 
-@connect(({ targetProtein, loading }) => ({
-  targetProtein,
-  loading: loading.models.targetProtein,
+@connect(({ biotechCompany, loading }) => ({
+  biotechCompany,
+  loading: loading.models.biotechCompany,
 }))
 
-export default class TargetProtein extends Component {
+export default class BiotechCompany extends Component {
   state = {
-    // markdown: [],
     currentLang: getLocale(),
   }
-  componentDidMount() {
-    // data.map((item) => {
-    //   fetch(item)
-    //     .then(res => res.text())
-    //     .then(text => this.setState({markdown: [...this.state.markdown, text]}));
-    // }) 
+  componentDidMount() { 
     const { dispatch } = this.props;
     dispatch({
-      type: 'targetProtein/fetch',
+      type: 'biotechCompany/fetch',
       payload: {
         lang: this.state.currentLang,
       },
@@ -44,9 +38,8 @@ export default class TargetProtein extends Component {
   }
 
   render() {
-    // const { markdown } = this.state;
     const {
-      targetProtein: { targetProtein = [] },
+      biotechCompany: { biotechCompany = [] },
       loading,
     } = this.props;
  
@@ -56,9 +49,9 @@ export default class TargetProtein extends Component {
         <HeadFeaturedPost post={headFeaturedPost} />
         <Container maxWidth="lg">
           <main>
-          { targetProtein.length ? 
+          { biotechCompany.length ? 
             <Grid container>
-              { targetProtein.map((post) => (
+              { biotechCompany.map((post) => (
                 <div key={JSON.parse(post.content).substring(0, 40)}>
                   {post.align == "right" ? <PictureAlignRight post={post} /> : post.align == "left" ? <PictureAlignLeft post={post} /> : <PictureAlignJustify post={post} />}
                 </div> 

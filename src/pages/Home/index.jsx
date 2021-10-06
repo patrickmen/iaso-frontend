@@ -3,14 +3,16 @@ import { enquireScreen } from 'enquire-js';
 import GridContent from '@/components/PageHeaderWrapper/GridContent';
 import Banner from './Banner';
 import Content0 from './Content0';
-import Content1 from './Content1';
-import Teams from './Teams';
+import Content3 from './Content3';
+// import Content1 from './Content1';
+// import Teams from './Teams';
 
 import {
   BannerData,
   Content0Data,
-  Content1Data,
-  TeamsData,
+  Content3Data,
+  // Content1Data,
+  // TeamsData,
 } from './data.source';
 import './less/antMotionStyle.less';
 
@@ -62,18 +64,24 @@ export default class Home extends React.Component {
         dataSource={Content0Data}
         isMobile={this.state.isMobile}
       />,
-      <Content1
-        id="Content1"
-        key="Content1"
-        dataSource={Content1Data}
+      <Content3
+        id="Content3"
+        key="Content3"
+        dataSource={Content3Data}
         isMobile={this.state.isMobile}
       />,
-      <Teams
-        id="Teams"
-        key="Teams"
-        dataSource={TeamsData}
-        isMobile={this.state.isMobile}
-      />,
+      // <Content1
+      //   id="Content1"
+      //   key="Content1"
+      //   dataSource={Content1Data}
+      //   isMobile={this.state.isMobile}
+      // />,
+      // <Teams
+      //   id="Teams"
+      //   key="Teams"
+      //   dataSource={TeamsData}
+      //   isMobile={this.state.isMobile}
+      // />,
     ];
     return (
       // <GridContent>

@@ -21,32 +21,36 @@ class Banner extends React.PureComponent {
       const elem = item.BannerElement;
       const elemClassName = elem.className;
       delete elem.className;
-      const { bg, textWrapper, title, content, button } = item;
+      const { bg, textWrapper, title, content, button, href } = item;
       return (
+        
         <Element key={i.toString()} {...elem} prefixCls={elemClassName}>
-          <BgElement key="bg" {...bg} />
-          <QueueAnim
-            type={['bottom', 'top']}
-            delay={200}
-            key="text"
-            {...textWrapper}
-          >
-            <div key="logo" {...title}>
-              {typeof title.children === 'string' &&
-              title.children.match(isImg) ? (
-                <img src={title.children} width="100%" alt="img" />
-              ) : (
-                title.children
-              )}
-            </div>
-            <div key="content" {...content}>
-              {content.children}
-            </div>
-            {/* <Button ghost key="button" {...button}>
-              {button.children}
-            </Button> */}
-          </QueueAnim>
+          <BgElement key="bg" {...bg}  />
+          <a href={href}>
+            <QueueAnim
+              type={['bottom', 'top']}
+              delay={200}
+              key="text"
+              {...textWrapper}
+            >
+              <div key="logo" {...title}>
+                {typeof title.children === 'string' &&
+                title.children.match(isImg) ? (
+                  <img src={title.children} width="100%" alt="img" />
+                ) : (
+                  title.children
+                )}
+              </div>
+              <div key="content" {...content}>
+                {content.children}
+              </div>
+              {/* <Button ghost key="button" {...button}>
+                {button.children}
+              </Button> */}
+            </QueueAnim>
+          </a>
         </Element>
+        
       );
     });
     return (

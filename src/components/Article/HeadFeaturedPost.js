@@ -17,6 +17,17 @@ const useStyles = makeStyles((theme) => ({
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
   },
+  headFeaturedNoPost: {
+    position: 'relative',
+    backgroundColor: theme.palette.grey[800],
+    color: theme.palette.common.white,
+    marginTop: 0,
+    paddingBottom: theme.spacing(30),
+    marginBottom: theme.spacing(2),
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'center',
+  },
   overlay: {
     position: 'absolute',
     top: 0,
@@ -40,6 +51,7 @@ export default function HeadFeaturedPost(props) {
   const { post } = props;
 
   return (
+    post.title ?
     <Paper className={classes.headFeaturedPost} style={{ backgroundImage: `url(${post.image})` }}>
       {/* Increase the priority of the hero background image */}
       {<img style={{ display: 'none' }} src={post.image} alt={post.imageText} />}
@@ -56,6 +68,10 @@ export default function HeadFeaturedPost(props) {
           </div>
         </Grid>
       </Grid>
+    </Paper> :
+    <Paper className={classes.headFeaturedNoPost} style={{ backgroundImage: `url(${post.image})` }}>
+      {<img style={{ display: 'none' }} src={post.image} alt={post.imageText} />}
+      <div className={classes.overlay} />
     </Paper>
   );
 }

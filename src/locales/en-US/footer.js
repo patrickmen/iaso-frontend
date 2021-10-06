@@ -5,10 +5,9 @@ export default {
   'app.footer.partnering': 'Partnering',
   'app.footer.news': 'News',
   'app.footer.technology': 'Technology',
-  'app.footer.gene-to-protein-platform': 'Gene To Protein Platform',
-  'app.footer.cadd-platform': 'CADD Platform',
+  'app.footer.target-validation-platform': 'Target Validation Platform',
   'app.footer.sbdd-platform': 'SBDD Platform',
-  'app.footer.del-platform': 'DEL Platform',
+  'app.footer.biomarker-development-platform': 'Biomarker Development Platform',
   'app.footer.contact-us': 'Contact Us',
   'app.footer.contact-details': 'Contact Details',
   'app.footer.careers': 'Careers',
@@ -16,4 +15,5 @@ export default {
   'app.footer.slogan0': 'Email：info@loflytx.com',
   'app.footer.slogan1': 'Location: Building 2, No. 38, Kechuang 5th Street, Economic and Technological Development Zone',
   'app.footer.copyright': '©2021 by LOFLY BIO All Rights Reserved',
+  'app.footer.record': 'ICP: No.18055446',
 }

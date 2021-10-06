@@ -10,8 +10,8 @@ export async function queryAboutUsList(params) {
 }
 
 // Target Protein API
-export async function queryTargetProteinList(params) {
-  return request(`/api/v1/technology/target-protein?${stringify(params)}`);
+export async function queryTargetValidationList(params) {
+  return request(`/api/v1/technology/target-validation?${stringify(params)}`);
 }
 
 // SBDD API
@@ -19,14 +19,9 @@ export async function querySBDDList(params) {
   return request(`/api/v1/technology/sbdd?${stringify(params)}`);
 }
 
-// CADD API
-export async function queryCADDList(params) {
-  return request(`/api/v1/technology/cadd?${stringify(params)}`);
-}
-
-// DEL API
-export async function queryDELList(params) {
-  return request(`/api/v1/technology/del?${stringify(params)}`);
+// Biomarker API
+export async function queryBiomarkerList(params) {
+  return request(`/api/v1/technology/biomarker-development?${stringify(params)}`);
 }
 
 // Products API
@@ -34,9 +29,14 @@ export async function queryProductsList(params) {
   return request(`/api/v1/products?${stringify(params)}`);
 }
 
-// Partnering API
-export async function queryPartneringList(params) {
-  return request(`/api/v1/partnering?${stringify(params)}`);
+// Academic Institution API
+export async function queryAcademicInstitutionList(params) {
+  return request(`/api/v1/partnering/academic-institution?${stringify(params)}`);
+}
+
+// Biotech Company API
+export async function queryBiotechCompanyList(params) {
+  return request(`/api/v1/partnering/biotech-company?${stringify(params)}`);
 }
 
 // News API

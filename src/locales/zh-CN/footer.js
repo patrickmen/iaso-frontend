@@ -5,10 +5,9 @@ export default {
   'app.footer.partnering': '合作伙伴',
   'app.footer.news': '新闻资讯',
   'app.footer.technology': '技术平台',
-  'app.footer.gene-to-protein-platform': 'Gene To Protein研究平台',
-  'app.footer.cadd-platform': 'CADD平台',
+  'app.footer.target-validation-platform': '靶点验证平台',
   'app.footer.sbdd-platform': 'SBDD平台',
-  'app.footer.del-platform': '高通量筛选平台',
+  'app.footer.biomarker-development-platform': 'Biomarker开发平台',
   'app.footer.contact-us': '联系我们',
   'app.footer.contact-details': '联系方式',
   'app.footer.careers': '职业发展',
@@ -16,4 +15,5 @@ export default {
   'app.footer.slogan0': '邮箱：info@loflytx.com',
   'app.footer.slogan1': '地址: 中国北京经济技术开发区科创五街38号院2号楼',
   'app.footer.copyright': '©2021 北京鹭飞生物科技有限公司保留所有版权',
+  'app.footer.record': '京ICP备18055446号',
 }

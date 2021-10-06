@@ -1,15 +1,15 @@
-import { queryTargetProteinList } from '@/services/api';
+import { queryBiomarkerList } from '@/services/api';
 
 export default {
-  namespace: 'targetProtein',
+  namespace: 'biomarker',
 
   state: {
-    targetProtein: [],
+    biomarker: [],
   },
 
   effects: {
     *fetch({ payload }, { call, put }) {
-      const response = yield call(queryTargetProteinList, payload);
+      const response = yield call(queryBiomarkerList, payload);
       yield put({
         type: 'queryList',
         payload: Array.isArray(response.data) ? response.data : [],
@@ -21,7 +21,7 @@ export default {
     queryList(state, action) {
       return {
         ...state,
-        targetProtein: action.payload,
+        biomarker: action.payload,
       };
     },
   },

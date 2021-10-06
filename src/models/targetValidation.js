@@ -1,27 +1,27 @@
-import { queryPartneringList } from '@/services/api';
+import { queryTargetValidationList } from '@/services/api';
 
 export default {
-  namespace: 'partnering',
+  namespace: 'targetValidation',
 
   state: {
-    partnering: [],
+    targetValidation: [],
   },
 
   effects: {
     *fetch({ payload }, { call, put }) {
-      const response = yield call(queryPartneringList, payload);
+      const response = yield call(queryTargetValidationList, payload);
       yield put({
         type: 'queryList',
         payload: Array.isArray(response.data) ? response.data : [],
       });
-    },
+    }
   },
 
   reducers: {
     queryList(state, action) {
       return {
         ...state,
-        partnering: action.payload,
+        targetValidation: action.payload,
       };
     },
   },

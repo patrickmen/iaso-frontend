@@ -11,9 +11,9 @@ import PictureAlignJustify from '@/components/Article/PictureAlignJustify';
 import Exception404 from '@/pages/ExceptionBeta/E404';
 
 const headFeaturedPost = {
-  title: 'MEET LOFLY BIO',
+  title: "",
   description:
-    "A Biopharmaceutical company, devoted to help the general public and investors better.",
+    "",
   image: 'https://cdn.pharmcafe.com/careers-banner-01.jpg',
   imgText: 'head image description',
 };

@@ -9,9 +9,9 @@ import HeadFeaturedPost from '@/components/Article/HeadFeaturedPost';
 import styles from './News.less';
 
 const headFeaturedPost = {
-  title: 'MEET LOFLY BIO',
+  title: "",
   description:
-    "A Biopharmaceutical company, devoted to help the general public and investors better.",
+    "",
   image: 'https://cdn.pharmcafe.com/news-banner-01.jpg',
   imgText: 'head image description',
 };
