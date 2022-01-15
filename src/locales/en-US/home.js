@@ -2,7 +2,7 @@ export default {
   'app.home.banner.title0': 'Improve the survival status of patients with advanced biotechnology',
   'app.home.banner.content0': 'Based on the research of natural immune signaling pathway, LOFLY constructs a clinical R & D pipeline in the fields of antitumor, antiviral, vaccine adjuvant and so on.',
   'app.home.banner.title1': 'Explore the forefront of medical research with rich technical means',
-  'app.home.banner.content1': 'Lofly team integrates interdisciplinary knowledge system and constructs three core technology platforms: target verification, structural biology and biomarker development to promote the early development of innovative drugs.',
+  'app.home.banner.content1': 'We integrates knowledge system and constructs three core technology platforms: target verification, structural biology and biomarker development to promote the early development of innovative drugs.',
   'app.home.banner.title2': 'Rely on creative team to achieve our mission',
   'app.home.banner.content2': "LOFLY is committed to creating an inclusive and friendly working environment and giving employees room for growth, so as to give full play to employees' innovation.",
   'app.home.banner.button': 'Learn More',

@@ -22,38 +22,38 @@ export const BannerData = {
         },
         // button: { className: 'banner-button', href: '/about-us', children: formatMessage({ id: 'app.home.banner.button' }) },
       },
-      // {
-      //   name: 'elem1',
-      //   href: '/technology/target-validation-platform',
-      //   BannerElement: { className: 'banner-user-elem' },
-      //   textWrapper: { className: 'banner-text-wrapper1' },
-      //   bg: { className: 'bg bg1'},
-      //   title: {
-      //     className: 'banner-title',
-      //     children: formatMessage({ id: 'app.home.banner.title1' }),
-      //   },
-      //   content: {
-      //     className: 'banner-content',
-      //     children: formatMessage({ id: 'app.home.banner.content1' }),
-      //   },
-      //   // button: { className: 'banner-button', href: '/about-us', children: formatMessage({ id: 'app.home.banner.button' }) },
-      // },
-      // {
-      //   name: 'elem2',
-      //   href: '/careers',
-      //   BannerElement: { className: 'banner-user-elem' },
-      //   textWrapper: { className: 'banner-text-wrapper2' },
-      //   bg: { className: 'bg bg2' },
-      //   title: {
-      //     className: 'banner-title',
-      //     children: formatMessage({ id: 'app.home.banner.title2' }),
-      //   },
-      //   content: {
-      //     className: 'banner-content',
-      //     children: formatMessage({ id: 'app.home.banner.content2' }),
-      //   },
-      //   // button: { className: 'banner-button', href: '/about-us', children: formatMessage({ id: 'app.home.banner.button' }) },
-      // },
+      {
+        name: 'elem1',
+        href: '/technology/target-validation-platform',
+        BannerElement: { className: 'banner-user-elem' },
+        textWrapper: { className: 'banner-text-wrapper1' },
+        bg: { className: 'bg bg1'},
+        title: {
+          className: 'banner-title',
+          children: formatMessage({ id: 'app.home.banner.title1' }),
+        },
+        content: {
+          className: 'banner-content',
+          children: formatMessage({ id: 'app.home.banner.content1' }),
+        },
+        // button: { className: 'banner-button', href: '/about-us', children: formatMessage({ id: 'app.home.banner.button' }) },
+      },
+      {
+        name: 'elem2',
+        href: '/careers',
+        BannerElement: { className: 'banner-user-elem' },
+        textWrapper: { className: 'banner-text-wrapper2' },
+        bg: { className: 'bg bg2' },
+        title: {
+          className: 'banner-title',
+          children: formatMessage({ id: 'app.home.banner.title2' }),
+        },
+        content: {
+          className: 'banner-content',
+          children: formatMessage({ id: 'app.home.banner.content2' }),
+        },
+        // button: { className: 'banner-button', href: '/about-us', children: formatMessage({ id: 'app.home.banner.button' }) },
+      },
     ],
     type: ['across'],
     autoPlay: true,
@@ -292,7 +292,7 @@ export const Content3Data = {
       {
         name: 'block0',
         className: 'content3-block',
-        md: 8,
+        md: 12,
         xs: 24,
         children: {
           className: 'content3-block-item',
@@ -315,7 +315,7 @@ export const Content3Data = {
       {
         name: 'block1',
         className: 'content3-block',
-        md: 8,
+        md: 10,
         xs: 24,
         children: {
           className: 'content3-block-item',

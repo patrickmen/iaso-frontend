@@ -6,10 +6,10 @@
 
   .@{content3} {
     height: 100%;
-    padding: 64px 24px;
+    padding: 30px 24px;
 
     >.title-wrapper {
-      margin: 0 auto 48px;
+      margin: 0 auto 10px;
     }
 
     &-block {
@@ -17,16 +17,19 @@
       display: inline-block;
       text-align: center;
       min-height: 200px;
-      margin: 0 8.3%;
+      margin: 0;
       img {
-        width: 100%;
+        max-width: 100%;
+        max-height: 100%;
+        display: block;
+        margin: auto;
       }
 
       &-wrapper {
         position: relative;
         height: 100%;
         top: 25%;
-        padding: 20px 0;
+        padding: 10px 0;
       }
 
       &.queue-anim-leaving {
@@ -34,15 +37,16 @@
       }
 
       &-icon {
-        width: 180px;
-        height: 250px;
-        margin: auto;
+        width: 512px;
+        height: 512px;
+        display: inline;
+        vertical-align: middle;
       }
 
       &-title {
-        line-height: 28px;
-        margin: 10px auto;
-        font-size: 20px;
+        line-height: 30px;
+        margin: 10px auto 20px;
+        font-size: 24px;
       }
     }
   }
@@ -50,6 +54,53 @@
 
 @media screen and (max-width: 767px) {
   .@{content3}-wrapper {
-    min-height: 880px;
+    min-height: 446px;
+
+    .@{content3} {
+      height: 100%;
+      padding: 10px 24px;
+  
+      >.title-wrapper {
+        margin: 0 auto 10px;
+      }
+  
+      &-block {
+        padding: 0 4%;
+        display: inline-block;
+        text-align: center;
+        min-height: 200px;
+        margin: 0;
+        img {
+          max-width: 100%;
+          max-height: 100%;
+          display: block;
+          margin: auto;
+        }
+  
+        &-wrapper {
+          position: relative;
+          height: 100%;
+          top: 25%;
+          padding: 10px 0;
+        }
+  
+        &.queue-anim-leaving {
+          position: relative !important;
+        }
+  
+        &-icon {
+          width: 512px;
+          height: 512px;
+          display: inline;
+          vertical-align: middle;
+        }
+  
+        &-title {
+          line-height: 30px;
+          margin: 10px auto 20px;
+          font-size: 20px;
+        }
+      }
+    }
   }
 }
