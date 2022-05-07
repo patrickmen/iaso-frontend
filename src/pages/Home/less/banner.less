@@ -1,5 +1,6 @@
 
 @banner: banner;
+@media screen and (-webkit-min-device-pixel-ratio:0) {
 .@{banner} {
   // 如果在第一屏且导航位置为 relative, 一屏为 height: calc(~"100vh - 128px");
   width: 100%;
@@ -84,6 +85,10 @@
     font-size: 40px;
     position: relative;
   }
+  /* Safari 7.1+ (9.0 is the latest version of Safari at this time) */
+  & _::-webkit-full-page-media, _:future, :root &-title{
+    margin: 365px 1px 5px;
+  }
   & &-content {
     margin: 50px 80px 20px;
     word-wrap: break-word;
@@ -125,6 +130,7 @@
     color: @template-text-color-light;
   }
 }
+}
 
 .banner-anim-thumb-default span {
   width: 10px;
@@ -161,8 +167,12 @@
       left: 5px;
       font-size: 30px;
     }
+    /* Safari 7.1+ (9.0 is the latest version of Safari at this time) */
+    & _::-webkit-full-page-media, _:future, :root &-title{
+      margin: 235px 1px 5px;
+    }
     & &-content {
-      font-size: 25px;
+      font-size: 24px;
       margin: 50px 1px 5px;
     }
   }

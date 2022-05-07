@@ -4,6 +4,6 @@ WORKDIR /usr/src/iaso-frontend/
 
 COPY ./dist  /usr/share/nginx/html/
 
-EXPOSE 9000
+EXPOSE 80
 
 CMD ["nginx", "-g", "daemon off;"]
