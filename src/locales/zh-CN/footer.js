@@ -15,5 +15,5 @@ export default {
   'app.footer.slogan0': '邮箱：info@loflytx.com',
   'app.footer.slogan1': '地址: 中国北京经济技术开发区科创五街38号院2号楼',
   'app.footer.copyright': '©2021 北京鹭飞生物科技有限公司保留所有版权',
-  'app.footer.record': '京ICP备18055446号',
+  'app.footer.record': '京ICP备18055446号-2',
 }

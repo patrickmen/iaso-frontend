@@ -422,7 +422,7 @@ export const FooterData = {
     children: (
       <span>
         {formatMessage({ id: 'app.footer.copyright' })}&nbsp;&nbsp; 
-        <a href="https://beian.miit.gov.cn" target="_blank" class="record">{formatMessage({ id: 'app.footer.record' })}</a>
+        <a href="https://beian.miit.gov.cn/" target="_blank" class="record">{formatMessage({ id: 'app.footer.record' })}</a>
       </span>
     ),
   },
