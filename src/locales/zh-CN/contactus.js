@@ -12,6 +12,6 @@ export default {
     'app.contact-us.map': 'https://cdn.pharmcafe.com/contact-map-01.png',
     'app.contact-us.addition-name': '#### 北京鹭飞生物科技有限公司',
     'app.contact-us.addition-office': '🏢:  北京经济技术开发区科创五街38号院2号楼，北京，中国',
-    'app.contact-us.addition-phone': '☎️:  +86(858)926-5251',
-    'app.contact-us.addition-email': '✉️:  info@loflytx.com',
+    'app.contact-us.addition-phone': '☎️:  (+86)13120349624',
+    'app.contact-us.addition-email': '✉️:  service@loflytx.com',
 }

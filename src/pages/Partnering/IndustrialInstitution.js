@@ -18,19 +18,19 @@ const headFeaturedPost = {
   imgText: 'head image description',
 };
 
-@connect(({ biotechCompany, loading }) => ({
-  biotechCompany,
-  loading: loading.models.biotechCompany,
+@connect(({ industrialInstitution, loading }) => ({
+  industrialInstitution,
+  loading: loading.models.industrialInstitution,
 }))
 
-export default class BiotechCompany extends Component {
+export default class IndustrialInstitution extends Component {
   state = {
     currentLang: getLocale(),
   }
   componentDidMount() { 
     const { dispatch } = this.props;
     dispatch({
-      type: 'biotechCompany/fetch',
+      type: 'industrialInstitution/fetch',
       payload: {
         lang: this.state.currentLang,
       },
@@ -39,7 +39,7 @@ export default class BiotechCompany extends Component {
 
   render() {
     const {
-      biotechCompany: { biotechCompany = [] },
+      industrialInstitution: { industrialInstitution = [] },
       loading,
     } = this.props;
  
@@ -49,9 +49,9 @@ export default class BiotechCompany extends Component {
         <HeadFeaturedPost post={headFeaturedPost} />
         <Container maxWidth="lg">
           <main>
-          { biotechCompany.length ? 
+          { industrialInstitution.length ? 
             <Grid container>
-              { biotechCompany.map((post) => (
+              { industrialInstitution.map((post) => (
                 <div key={JSON.parse(post.content).substring(0, 40)}>
                   {post.align == "right" ? <PictureAlignRight post={post} /> : post.align == "left" ? <PictureAlignLeft post={post} /> : <PictureAlignJustify post={post} />}
                 </div> 

@@ -12,7 +12,7 @@ export default {
   'menu.PIPELINE': 'Pipeline',
   'menu.PARTNERING': 'Partnering',
   'menu.PARTNERING.ACADEMIC-INSTITUTION': 'Academic Institution',
-  'menu.PARTNERING.BIOTECH-COMPANY': 'Biotech Company',
+  'menu.PARTNERING.INDUSTRIAL-INSTITUTION': 'Industrial Institution',
   'menu.NEWS': 'News',
   'menu.CAREERS': 'Careers',
   'menu.CONTACT-US': 'Contact US',

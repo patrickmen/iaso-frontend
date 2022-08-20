@@ -1,15 +1,15 @@
-import { queryBiotechCompanyList } from '@/services/api';
+import { queryIndustrialInstitutionList } from '@/services/api';
 
 export default {
-  namespace: 'biotechCompany',
+  namespace: 'industrialInstitution',
 
   state: {
-    biotechCompany: [],
+    industrialInstitution: [],
   },
 
   effects: {
     *fetch({ payload }, { call, put }) {
-      const response = yield call(queryBiotechCompanyList, payload);
+      const response = yield call(queryIndustrialInstitutionList, payload);
       yield put({
         type: 'queryList',
         payload: Array.isArray(response.data) ? response.data : [],
@@ -21,7 +21,7 @@ export default {
     queryList(state, action) {
       return {
         ...state,
-        biotechCompany: action.payload,
+        industrialInstitution: action.payload,
       };
     },
   },

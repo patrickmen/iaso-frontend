@@ -34,9 +34,9 @@ export async function queryAcademicInstitutionList(params) {
   return request(`/api/v1/partnering/academic-institution?${stringify(params)}`);
 }
 
-// Biotech Company API
-export async function queryBiotechCompanyList(params) {
-  return request(`/api/v1/partnering/biotech-company?${stringify(params)}`);
+// Industrial Institution API
+export async function queryIndustrialInstitutionList(params) {
+  return request(`/api/v1/partnering/industrial-institution?${stringify(params)}`);
 }
 
 // News API

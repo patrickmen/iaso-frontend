@@ -40,7 +40,7 @@ export const BannerData = {
       },
       {
         name: 'elem2',
-        href: '/careers',
+        href: '/technology/sbdd-platform',
         BannerElement: { className: 'banner-user-elem' },
         textWrapper: { className: 'banner-text-wrapper2' },
         bg: { className: 'bg bg2' },
@@ -322,10 +322,10 @@ export const Content3Data = {
           children: [
             {
               name: 'image',
-              href: '/partnering/biotech-company',
+              href: '/partnering/industrial-institution',
               className: 'content3-block-icon',
               children:
-                'https://cdn.pharmcafe.com/biotechcompany.jpg',
+                'https://cdn.pharmcafe.com/industrialinstitution.jpg',
             },
             {
               name: 'title',

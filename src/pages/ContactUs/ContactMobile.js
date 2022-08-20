@@ -129,7 +129,6 @@ export default function ContactMobile() {
                 label={ formatMessage({ id: 'app.contact-us.name' }) }
                 name="name"
                 onChange={handleChange("name")}
-                autoFocus
               />
               <TextField
                 variant="outlined"
@@ -139,7 +138,6 @@ export default function ContactMobile() {
                 id="email"
                 label={ formatMessage({ id: 'app.contact-us.email' }) }
                 name="email"
-                autoFocus
                 onChange={handleChange("email")}
               />
               <TextField

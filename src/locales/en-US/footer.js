@@ -12,7 +12,7 @@ export default {
   'app.footer.contact-details': 'Contact Details',
   'app.footer.careers': 'Careers',
   'app.footer.online-message': 'Online Message',
-  'app.footer.slogan0': 'Email：info@loflytx.com',
+  'app.footer.slogan0': 'Email：service@loflytx.com',
   'app.footer.slogan1': 'Location: Building 2, No. 38, Kechuang 5th Street, Economic and Technological Development Zone',
   'app.footer.copyright': '©2021 by LOFLY BIO All Rights Reserved',
   'app.footer.record': 'ICP: No.18055446-2',
